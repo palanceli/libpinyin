@@ -21,6 +21,7 @@ project (${PACKAGE_NAME} CXX C)
 enable_testing()
 
 ######## Package information
+set (CMAKE_MACOSX_RPATH 1)
 set (PACKAGE_URL https://github.com/libpinyin/libpinyin)
 set (PACKAGE_BUGREPORT https://github.com/libpinyin/libpinyin/issues)
 set (LIBPINYIN_VERSION_MAJOR 0)
@@ -74,6 +75,7 @@ if (DB_FOUND)
   SET (HAVE_BERKELEY_DB 1)
   SET (CMAKE_CXX_LINK_EXECUTABLE
     "${CMAKE_CXX_LINK_EXECUTABLE} ${LIBS}")
+  message(STATUS "====== ${DB_LIBRARY}")
 endif (DB_FOUND)
 
 if (NOT HAVE_BERKELEY_DB)
@@ -171,6 +173,7 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/src/lookup
     ${PROJECT_SOURCE_DIR}/utils
     ${PROJECT_SOURCE_DIR}/tests
+    ${PROJECT_BINARY_DIR}
 )
 
 ######## Subdirectories

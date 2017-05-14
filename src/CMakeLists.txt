@@ -18,6 +18,7 @@ target_link_libraries(
     libpinyin
     storage
     lookup
+    ${DB_LIBRARY}
 )
 
 set_target_properties(
