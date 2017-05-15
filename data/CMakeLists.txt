@@ -25,12 +25,12 @@ set(
 
 set(
     import_interpolation_BIN
-    ${CMAKE_BINARY_DIR}/utils/storage/import_interpolation
+    ${CMAKE_BINARY_DIR}/utils/storage/Debug/import_interpolation
 )
 
 set(
     gen_unigram_BIN
-    ${CMAKE_BINARY_DIR}/utils/training/gen_unigram
+    ${CMAKE_BINARY_DIR}/utils/training/Debug/gen_unigram
 )
 
 add_custom_target(
